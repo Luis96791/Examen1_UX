@@ -1,6 +1,5 @@
 <h1>Listing Locations</h1>
  
-<%= link_to 'New Location', new_location_path %>
 <table>
   <tr>
     <th>Location</th>
@@ -9,6 +8,10 @@
   <% @locations.each do |location| %>
     <tr>
       <td><%= location.name %></td>
+      <td><%= link_to 'Show', location_path(location) %></td>
+      <td><%= link_to 'Edit', edit_location_path(location) %></td>
     </tr>
   <% end %>
 </table>
+
+<%= link_to 'New Location', new_location_path %>
