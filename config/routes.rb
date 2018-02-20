@@ -1,6 +1,6 @@
 Clima::Application.routes.draw do
   resources :locations do
-  	resources :recording
+  	resources :recordings
   end
 
   root 'welcome#index'

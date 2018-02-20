@@ -5,7 +5,7 @@ class CreateRecordings < ActiveRecord::Migration[5.1]
       t.integer :temp
       t.string :status
 
-      t.references :location, index: true
+      t.references :location, foreign_key: true
 
       t.timestamps
     end
