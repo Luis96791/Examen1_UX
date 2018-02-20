@@ -4,5 +4,24 @@
   <%= @location.name %>
 </p>
 
+<h2>Recordings</h2>
+
+
+<h2>New Record:</h2>
+	<%= form_for([@location, @location.comments.build]) do |f| %>
+  	<p>
+    	<%= f.label :temp %><br>
+    	<%= f.text_field :temp %>
+  	</p>
+  	
+  	<p>
+    	<%= f.label :status %><br>
+    	<%= f.text_field :status %>
+  	</p>
+  	<p>
+    	<%= f.submit %>
+  	</p>
+<% end %>
+
 <%= link_to 'Back', locations_path %>
 | <%= link_to 'Edit', edit_location_path(@location) %>
